@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>SIMULADOR PLAZO FIJO | 37% ANUAL</title>
+
+</head>
+<body>
+
+
+  <div class="contenedorPopUp">
+    <div  class="popUp">
+    <p>Hola! Bienvenido a mi proyecto final. <br>
+       Disfruté mucho de las clases y siento que termino con muchos conocimientos de Javascript y muchisimo por seguir investigando y aprendiendo.
+       <br>Simplemente GRACIAS por hacerlo posible :)
+    </p>
+    <button id="cerrar">cerrar</button>
+    </div>
+</div>
+
+  <header class="d-flex-row pt-4 pb-4 text-white align-items-center bg-primary" style="text-align: center;">
+    <h6>SIMULADOR PLAZO FIJO</h6>
+  </header>
+
+<div class="ps-3 pe-3">
+
+
+  <form name="radioFormUno" id="radioFormUno">
+  <h2>¿Sos cliente?</h2>
+    
+  <div>
+    <input type="radio" name="radioUno" value="1" checked class="me-2"> Sí
+  </div>
+  
+  <div>
+    <input type="radio" name="radioUno" value="2" class="me-2"> No
+  </div>
+  
+</form>
+
+  <form name="mainFormDos">
+    <h2>Tipo de Plazo Fijo</h2>
+
+  <div>
+    <input type="radio" name="radioDos" value="1" checked class="me-2"> Plazo Fijo en ARS
+  </div>
+  
+  <div>
+    <input type="radio" name="radioDos" value="2" id="radioDolar" class="me-2"> Plazo Fijo en USD (sólo clientes)
+  </div>  
+  
+</form>
+
+
+  
+
+    <h2>¿Cuánto querés invertir?</h2>
+    <input type="number" id="inversion" class="form-control mt-2">
+    <div id="errorMonto" style="font-size:13px; color: tomato;"></div>
+    
+    <div class="mt-2">
+    <button onclick="calculoDefault(this)" data-valor="30" class="btn btn-outline-primary">30</button>
+    <button onclick="calculoDefault(this)" data-valor="60" class="btn btn-outline-primary">60</button>
+    <button onclick="calculoDefault(this)" data-valor="90" class="btn btn-outline-primary">90</button>
+    <button onclick="template()" class="btn btn-outline-primary">MAS DIAS</button>
+  </div>
+    
+    <div id="temp"></div>
+
+    
+    
+    
+    
+
+    <div class="card mb-3 mt-4" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="https://www.bbva.com.ar/simulador-plazo-fijo/img/obtener-rentas.83f187ed.svg" class="img-fluid rounded-start" style="width:200px">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title" id="inversionx"></h5>
+            <h5 class="card-title" id="ganancia"></h5>
+            <p class="card-text" id="tasax"></p>
+            <p class="card-text" id="diasx"><small class="text-muted"></small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+</div>
+
+<footer class="text-white align-items-center bg-primary">
+  <button id="bdark" class="btn btn-outline-dark text-white btn-lg ">darkMode</button>
+</footer>
+
+
+<script src="simGama.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
