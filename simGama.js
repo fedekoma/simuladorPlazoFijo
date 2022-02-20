@@ -2,7 +2,7 @@
 const plazo = {
     pesos:{
         categ: "Pesos",        
-        tasa: 0.37,
+        tasa: 0.42,
         montoMinimo: 1500,
         mensajeError: "El monto minimo en pesos debe ser 1500",
         mensajeErrorTiempo: "Su inversión debe ser mayor a 30 y menor que 365 días",
